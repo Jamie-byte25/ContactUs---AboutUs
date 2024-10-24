@@ -8,48 +8,36 @@ body {
 
 header {
     background-color: #00609e;
-    padding: 10px 0;
-    position: relative;
+    padding: 15px 20px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 4px solid #00609e;
 }
 
-.logo img {
-    width: 75px;
-    margin-left: 20px;
-    position: relative;
+header img {
+max-height: 60px;
+max-width: auto;
 }
 
 /* Navigation Bar Styles */
-header {
-    background: linear-gradient(90deg, rgba(0, 96, 158, 0.8), rgba(34, 72, 158, 0.8)); /* Adjust alpha value for transparency */
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
 nav ul {
     list-style: none;
-    padding: 15px;
     display: flex;
     justify-content: center;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.95em;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #60bcef;
     color: #22489e;
 }
 
@@ -61,128 +49,68 @@ nav ul li a.active {
 
 
 .search-bar {
-    margin-right: 15px; /* Pushes the search bar to the right */
+    margin-left: 15px;
     display: flex;
-    align-items: center;
-}
-.banner{
-    margin-top: 10px;
-}
-
-.banner img {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-}
-
-main {
-    padding: 20px;
-}
-
-h1 {
-    color: #22489e;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-label {
-    margin: 10px 0 5px;
-    font-size: 16px;
-}
-
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #22489e;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #60bcef;
-}
-
-/* Footer styling (if needed) */
-footer {
-    text-align: center;
-    padding: 25px;
-    background-color: #00609e;
-    color: white;
-    position: fixed;
-    bottom: 1;
-    width: 100%;
-}
-
-.search-bar {
-    display: flex;
-    justify-content: space-between;
+    
 }
 
 .search-bar input[type="text"] {
-    padding: 5px;
-    border-radius: 3px;
+    padding: 8px 12px;
+    font-size: 14px;
     border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
 }
 
-.search-bar button {
-    padding: 5px 10px;
-    background-color: #555;
-    color: white;
+.search-bar button{
+    padding: 8px 12px;
+    background-color: #60bcef;
     border: none;
-    border-radius: 3px;
+    color: white;
     cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
-    background-color: #666;
+    background-color: #4fa0ce;
 }
 
-.chatbox {
-    width: 300px;
-    position: fixed;
-    right: 20px; /* Distance from the right edge */
-    bottom: 250px; /* Distance from the bottom edge */
-    border: 2px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    z-index: 1000; /* Ensures it's above other content */
-}
-
-.chatbox h3 {
+/* Hero section for full-width banner */
+.hero {
+    position: relative;
+    height: 400px; /* Adjust the height as per your design */
+    background-image: url(images/About\ us\ image.jpg);
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    
+    /* Semi-transparent overlay to make the image appear faded */
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay with opacity */
+    background-blend-mode: overlay; /* Blends the color and image */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-}
-
-.chatbox textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.chatbox button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #00609e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.chatbox button:hover {
-    background-color: #218838;
-}
+  }
+  
+  /* Styling the h1 inside the hero section */
+  .hero h1 {
+    font-size: 48px;
+    color: white; /* Text color to contrast with background */
+    z-index: 1; /* Ensures the text appears above the background */
+    position: relative; /* Ensures the text is on top of the background */
+  }
+  
+  /* Optional: Add a semi-transparent background behind the h1 text itself for readability */
+  .hero h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
